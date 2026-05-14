@@ -35,6 +35,15 @@ The key insight: two proteins with very different sequences can have similar emb
 ![Precision@10 by protein type, comparing embedding distance metrics against BLAST](outputs/figures/precision_at_10.png)
 *Precision@10 across 10 query proteins by category, comparing three embedding distance metrics (cosine, Euclidean, Manhattan) against BLAST. The three distance metrics produce nearly identical results — a consequence of the tight L2 norm distribution in ESM2 embeddings. BLAST outperforms embedding search in 4 of 5 categories. The exception is receptors (GPCRs), where embedding precision@10 reaches 0.70 versus BLAST's 1.00 — the closest the two methods come to comparable performance, and a hint that embeddings may carry their own weight when relevant proteins are well-represented in the search space.*
 
+## Detailed analysis
+
+Writeups with full methodology, intermediate results, and reasoning:
+
+- [1 — Data exploration and embeddings](analysis/01_data_exploration_and_embeddings.md)
+- [2 — Dimensionality reduction](analysis/02_dimensionality_reduction.md)
+- [3 — Clustering](analysis/03_clustering.md)
+- [4 — Similarity search vs BLAST](analysis/04_similarity_search_vs_blast.md)
+
 
 ## Methods summary
 
