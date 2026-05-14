@@ -91,9 +91,8 @@ protein-search/
 
 **1. Set up the environment**
 ```bash
-conda create -n protein-search python=3.11
+conda env create -f environment.yml
 conda activate protein-search
-pip install numpy pandas scikit-learn umap-learn hdbscan matplotlib seaborn biopython requests torch fair-esm scipy
 ```
 
 **2. Fetch data and compute embeddings**
