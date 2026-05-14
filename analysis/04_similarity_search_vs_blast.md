@@ -1,4 +1,4 @@
-# Week 4 — Similarity search vs BLAST
+# Similarity search vs BLAST
 
 ## Experimental setup
 

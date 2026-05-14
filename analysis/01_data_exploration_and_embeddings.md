@@ -1,4 +1,4 @@
-# Week 1 — Data pipeline, embeddings, and first search
+# Data pipeline, embeddings, and first search
 
 ## Dataset
 
