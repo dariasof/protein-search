@@ -22,11 +22,19 @@ The key insight: two proteins with very different sequences can have similar emb
 - PCA-50D outperforms full 320D for clustering (ARI 0.405 vs 0.381) because dimensions 50-320 add noise rather than signal
 - UMAP and t-SNE significantly outperform PCA for family separation (ARI ~0.63 vs 0.17) — protein embedding space is non-linear
 
+![UMAP projection of ESM2 embeddings coloured by protein family](outputs/figures/umap_families.png)
+*UMAP 2D projection of ESM2 embeddings (n_neighbors=15), coloured by protein family. Membrane protein families — G-protein coupled receptors, Tetraspanins, and Concentrative nucleoside transporters — separate cleanly along the vertical axis despite divergent amino acid sequences. The GPCR separation is consistent with the precision@10 result, where embedding similarity reached BLAST-comparable performance specifically for this family.*
+
+
 **Similarity search vs BLAST**
 - All three distance metrics (cosine, Euclidean, Manhattan) perform identically (precision@10 ≈ 0.114) — a consequence of the tight L2 norm distribution in ESM2 embeddings
 - BLAST outperforms embedding search overall (mean precision@10: 0.645 vs 0.170) across 10 diverse query proteins
 - **Key exception:** for GPCRs, embedding search reaches precision@10 = 0.700 vs BLAST 1.000 — near-comparable performance when the relevant proteins are well-represented in the search space
 - The comparison is confounded by two differences simultaneously: similarity metric (sequence vs vector) and search space (20,000 vs 376 proteins). A fair comparison requires full SwissProt embeddings.
+
+![Precision@10 by protein type, comparing embedding distance metrics against BLAST](outputs/figures/precision_at_10.png)
+*Precision@10 across 10 query proteins by category, comparing three embedding distance metrics (cosine, Euclidean, Manhattan) against BLAST. The three distance metrics produce nearly identical results — a consequence of the tight L2 norm distribution in ESM2 embeddings. BLAST outperforms embedding search in 4 of 5 categories. The exception is receptors (GPCRs), where embedding precision@10 reaches 0.70 versus BLAST's 1.00 — the closest the two methods come to comparable performance, and a hint that embeddings may carry their own weight when relevant proteins are well-represented in the search space.*
+
 
 ## Methods summary
 
@@ -70,8 +78,9 @@ protein-search/
     ├── figures/
     │   ├── pca_variance.png
     │   ├── kmeans_elbow.png
-    │   ├── cluster_umap.png
+    │   ├── umap_families.png
     │   └── dimred_comparison.png
+    │   ├── precision_at_10.png
     └── tables/
         ├── clustering_metrics.csv
         ├── go_enrichment.csv
