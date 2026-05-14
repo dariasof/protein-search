@@ -74,7 +74,7 @@ protein-search/
 │   ├── evaluation.py        # ARI, silhouette, Davies-Bouldin
 │   └── go_enrichment.py     # hypergeometric test for GO term enrichment
 ├── notebooks/
-│   ├── 01_eda.ipynb
+│   ├── 01_data_setup.ipynb
 │   ├── 02_dimensionality_reduction.ipynb
 │   ├── 03_clustering.ipynb
 │   └── 04_similarity_vs_blast.ipynb
