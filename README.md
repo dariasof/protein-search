@@ -14,7 +14,7 @@ The key insight: two proteins with very different sequences can have similar emb
 - ESM2 embeddings contain genuine biological structure detectable by all three clustering algorithms (k-means, HDBSCAN, hierarchical)
 - All 26 k-means clusters show statistically significant GO term enrichment (p < 0.05), corresponding to biologically coherent categories: GPCRs, nucleosomes, immunoglobulins, kinases, transcription factors, extracellular matrix proteins
 - GPCRs are the most consistently distinct family — they form a tight, isolated cluster in every analysis method
-- K-means ARI against known protein families: 0.494 (k=29), HDBSCAN: 0.445 (k=26 automatic), hierarchical: 0.433 (k=30)
+- K-means ARI against known protein families: 0.463 (k=26), HDBSCAN: 0.445 (k=26 automatic), hierarchical: 0.433 (k=30)
 - K-means stability ARI: 0.697 across 10 subsampled runs; HDBSCAN stability: 0.417 (more sensitive to subsample density)
 
 **Dimensionality reduction**

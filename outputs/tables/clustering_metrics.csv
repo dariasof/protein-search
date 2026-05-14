@@ -1,1 +1,5 @@
-method,k,ari,silhouette,davies_bouldin
+algorithm,embedding,n_clusters,ari_vs_families
+kmeans,UMAP-2D,26,0.46337308347529815
+hdbscan,UMAP-2D,26,0.4454638124362895
+hierarchical,320D-raw,30,0.4325407427197435
+hierarchical,320D-raw,60,0.46491531282405807
